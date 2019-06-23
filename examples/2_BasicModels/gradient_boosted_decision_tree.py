@@ -25,7 +25,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = ""
 # Set verbosity to display errors only (Remove this line for showing warnings)
 tf.logging.set_verbosity(tf.logging.ERROR)
 from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets("/tmp/data/", one_hot=False,
+mnist = input_data.read_data_sets("/MNIST_data/data/", one_hot=False,
                                   source_url='http://yann.lecun.com/exdb/mnist/')
 
 # Parameters

@@ -13,14 +13,14 @@ import tensorflow as tf
 
 # Import MNIST data
 from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets("/tmp/data/", one_hot=True)
+mnist = input_data.read_data_sets("/MNIST_data/data/", one_hot=True)
 
 # Parameters
 learning_rate = 0.01
 training_epochs = 25
 batch_size = 100
 display_epoch = 1
-logs_path = '/tmp/tensorflow_logs/example/'
+logs_path = '/MNIST_data/tensorflow_logs/example/'
 
 # tf Graph Input
 # mnist data image of shape 28*28=784
@@ -93,5 +93,5 @@ with tf.Session() as sess:
     print("Accuracy:", acc.eval({x: mnist.test.images, y: mnist.test.labels}))
 
     print("Run the command line:\n" \
-          "--> tensorboard --logdir=/tmp/tensorflow_logs " \
+          "--> tensorboard --logdir=/MNIST_data/tensorflow_logs " \
           "\nThen open http://0.0.0.0:6006/ into your web browser")
